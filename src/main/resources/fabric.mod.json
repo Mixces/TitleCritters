@@ -13,17 +13,11 @@
 	"license": "LGPL-3.0",
 	"icon": "assets/titlecritters/icon.png",
 	"environment": "*",
-	"entrypoints": {
-		"init": [
-      "me.mixces.titlecritters.TitleCritters"
-		]
-	},
 	"mixins": [
     "titlecritters.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.14.21",
-		"minecraft": "1.8.9",
-		"osl-entrypoints": ">=0.4.0"
+    "fabricloader": ">=0.17.3",
+    "minecraft": "1.8.9"
 	}
 }

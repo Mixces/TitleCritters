@@ -1,17 +1,18 @@
 {
-	"required": true,
-	"minVersion": "0.8",
-	"package": "me.mixces.titlecritters.mixin",
-	"compatibilityLevel": "JAVA_8",
-	"mixins": [
-	],
-	"client": [
-		"ItemRendererAccessor",
-		"TitleScreenMixin"
-	],
-	"server": [
-	],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.mixces.titlecritters.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  ],
+  "client": [
+    "ItemRendererAccessor",
+    "MinecraftMixin",
+    "TitleScreenMixin"
+  ],
+  "server": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }

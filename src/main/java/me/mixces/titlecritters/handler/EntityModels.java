@@ -2,10 +2,10 @@ package me.mixces.titlecritters.handler;
 
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.minecraft.MinecraftProfileTexture;
-import com.mojang.blaze3d.platform.GlStateManager;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.render.model.Model;
 import net.minecraft.client.render.model.entity.*;
+import net.minecraft.client.render.platform.GlStateManager;
 import net.minecraft.client.resource.skin.DefaultSkinUtils;
 import net.minecraft.entity.living.player.PlayerEntity;
 import net.minecraft.resource.Identifier;
@@ -48,16 +48,16 @@ public class EntityModels {
 			/* arms up */
 			model.head.rotationY = yaw / (180.0F / (float)Math.PI);
 			model.head.rotationX = pitch / (180.0F / (float)Math.PI);
-			model.head.pivotY = 0.0F;
+			model.head.y = 0.0F;
 			model.body.rotationX = 0.0F;
 			model.rightLeg.rotationX = 0.0F;
 			model.rightLeg.rotationY = 0.0F;
-			model.rightLeg.pivotY = 12.0F;
-			model.rightLeg.pivotZ = 0.1F;
+			model.rightLeg.y = 12.0F;
+			model.rightLeg.z = 0.1F;
 			model.leftLeg.rotationX = 0.0F;
 			model.leftLeg.rotationY = 0.0F;
-			model.leftLeg.pivotY = 12.0F;
-			model.leftLeg.pivotZ = 0.1F;
+			model.leftLeg.y = 12.0F;
+			model.leftLeg.z = 0.1F;
 			model.rightArm.rotationZ = 0.0F;
 			model.leftArm.rotationZ = 0.0F;
 			model.rightArm.rotationY = -0.1F;
@@ -78,7 +78,7 @@ public class EntityModels {
 			/* arms by side */
 			model.head.rotationY = yaw / (180.0F / (float)Math.PI);
 			model.head.rotationX = pitch / (180.0F / (float)Math.PI);
-			model.head.pivotY = 0.0F;
+			model.head.y = 0.0F;
 			model.body.rotationX = 0.0F;
 			model.leftArm.rotationX = 0.0F;
 			model.leftArm.rotationY = 0.0F;
@@ -89,12 +89,12 @@ public class EntityModels {
 			model.rightArm.rotationZ = 0.0F;
 			model.rightLeg.rotationX = 0.0F;
 			model.rightLeg.rotationY = 0.0F;
-			model.rightLeg.pivotY = 12.0F;
-			model.rightLeg.pivotZ = 0.1F;
+			model.rightLeg.y = 12.0F;
+			model.rightLeg.z = 0.1F;
 			model.leftLeg.rotationX = 0.0F;
 			model.leftLeg.rotationY = 0.0F;
-			model.leftLeg.pivotY = 12.0F;
-			model.leftLeg.pivotZ = 0.1F;
+			model.leftLeg.y = 12.0F;
+			model.leftLeg.z = 0.1F;
 			model.rightArm.rotationZ = model.rightArm.rotationZ + 0.1F;
 			model.leftArm.rotationZ = model.leftArm.rotationZ - 0.1F;
 			model.rightArm.rotationX = model.rightArm.rotationX + 0.05F;

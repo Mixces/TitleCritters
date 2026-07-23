@@ -1,8 +1,5 @@
 package me.mixces.titlecritters.handler;
 
-import com.mojang.blaze3d.platform.GLX;
-import com.mojang.blaze3d.platform.GlStateManager;
-import com.mojang.blaze3d.platform.Lighting;
 import me.mixces.titlecritters.mixin.ItemRendererAccessor;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.render.model.block.ModelTransformations;
@@ -10,6 +7,9 @@ import net.minecraft.client.render.model.entity.CreeperModel;
 import net.minecraft.client.render.model.entity.PlayerModel;
 import net.minecraft.client.render.model.entity.SkeletonModel;
 import net.minecraft.client.render.model.entity.ZombieModel;
+import net.minecraft.client.render.platform.GLX;
+import net.minecraft.client.render.platform.GlStateManager;
+import net.minecraft.client.render.platform.Lighting;
 import net.minecraft.client.resource.model.BakedModel;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -87,7 +87,7 @@ public class ModelRenderer {
 			ItemStack stack = new ItemStack(Items.DIAMOND_SWORD, 0);
 			BakedModel model = Minecraft.getInstance().getItemRenderer().getModelShaper().getModel(stack);
 			GlStateManager.pushMatrix();
-			((ItemRendererAccessor) Minecraft.getInstance().getItemRenderer()).invokeRenderHeldItem(stack, model, ModelTransformations.Type.THIRD_PERSON);
+			((ItemRendererAccessor) Minecraft.getInstance().getItemRenderer()).invokeRenderItemInHand(stack, model, ModelTransformations.Type.THIRD_PERSON);
 			GlStateManager.popMatrix();
 			GlStateManager.popMatrix();
 		}

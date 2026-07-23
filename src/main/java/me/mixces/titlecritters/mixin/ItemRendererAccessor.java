@@ -1,6 +1,6 @@
 package me.mixces.titlecritters.mixin;
 
-import net.minecraft.client.render.item.ItemRenderer;
+import net.minecraft.client.render.entity.ItemRenderer;
 import net.minecraft.client.render.model.block.ModelTransformations;
 import net.minecraft.client.resource.model.BakedModel;
 import net.minecraft.item.ItemStack;
@@ -11,5 +11,5 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 public interface ItemRendererAccessor {
 
 	@Invoker
-	void invokeRenderHeldItem(ItemStack stack, BakedModel model, ModelTransformations.Type transformationType);
+	void invokeRenderItemInHand(ItemStack stack, BakedModel model, ModelTransformations.Type transformationType);
 }
